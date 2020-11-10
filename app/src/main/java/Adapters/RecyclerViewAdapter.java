@@ -11,14 +11,16 @@ import com.example.gestiondeboissons.R;
 
 import java.util.List;
 
+import Models.Drink;
 import Models.Order;
+import androidx.annotation.DimenRes;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.RecyclerViewHolder> {
-    private List<Order> dataModelList;
+    private List<Drink> dataModelList;
 
-    public RecyclerViewAdapter(List<Order> dataModelList){
+    public RecyclerViewAdapter(List<Drink> dataModelList){
         this.dataModelList = dataModelList;
     }
 
@@ -33,9 +35,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewHolder holder, int position){
-        holder.tvName.setText(dataModelList.get(position).getName));
-        holder.tvPrice.setText(String.valueOf(dataModelList.get(position).prixCommande()));
-        holder.tvSize.setText(String.valueOf(dataModelList.get(position).getSize));
+        holder.tvName.setText(dataModelList.get(position).get_nom());
+        holder.tvPrice.setText(String.valueOf(dataModelList.get(position).get_prix());
+        holder.tvSize.setText(String.valueOf(dataModelList.get(position).get_volumeCl());
     }
 
     public long getItemId(int position){
@@ -55,10 +57,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         public RecyclerViewHolder(@NonNull View itemView){
             super(itemView);
-            llItemView = itemView.findViewById(R.id.LLItemView);
-            tvId = itemView.findViewById(R.id.tvId);
-            tvDate = itemView.findViewById(R.id.tvDate);
-            tvTableNumber = itemView.findViewById(R.id.tvTableNumber);
+            ivDrink = itemView.findViewById(R.id.ivDrink);
+            tvName = itemView.findViewById(R.id.tvName);
+            tvPrice = itemView.findViewById(R.id.tvPrice);
+            tvSize = itemView.findViewById(R.id.tvSize);
         }
 
     }

@@ -1,6 +1,7 @@
 package Activities;
 
 import Models.Drink;
+import Models.Order;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
+    private Order myOrder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,16 +28,18 @@ public class MainActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        initSpinner();
-        initListView();
+        myOrder = new Order(1);
+
+        initializeSpinner();
+        initializeUI();
     }
 
-    private void initListView()
+    private void initializeUI()
     {
 
     }
 
-    public void initSpinner()
+    public void initializeSpinner()
     {
         ArrayList<Drink> drinks = new ArrayList<>();
 

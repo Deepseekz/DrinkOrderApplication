@@ -49,15 +49,5 @@ public class Order implements Serializable {
         }
         return price;
 
-
-
-    }
-
-    public Date getOrderDate() {
-        return new Date();
-    }
-
-    public int getTableNumber() {
-        return new Random().nextInt() % 50;
     }
 }
