@@ -40,11 +40,11 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Drink> drinks = new ArrayList<>();
 
         drinks.add(new Drink( "Coffee", 5, 1.4, 0));
-        drinks.add(new Drink( "Green Tea", 5, 3.5, 1));
-        drinks.add(new Drink( "Black Tea", 5, 2.6, 2));
+        drinks.add(new Drink( "Green Tea", 6, 3.5, 1));
+        drinks.add(new Drink( "Black Tea", 6, 2.6, 2));
         drinks.add(new Drink( "Cappuccino", 5, 3.2, 3));
-        drinks.add(new Drink( "Hot Chocolate", 5, 3.4, 4));
-        drinks.add(new Drink( "Ice Tea", 5, 2, 5));
+        drinks.add(new Drink( "Hot Chocolate", 7, 3.4, 4));
+        drinks.add(new Drink( "Ice Tea", 12, 2, 5));
 
         ArrayAdapter<Drink> adapter = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, drinks);
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);

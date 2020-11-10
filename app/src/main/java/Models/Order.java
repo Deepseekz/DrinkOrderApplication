@@ -1,15 +1,25 @@
 package Models;
 
+import android.os.SystemClock;
+
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Random;
 
 public class Order implements Serializable {
+
     private int _orderNumber;
     private ArrayList<Drink> _theDrinks;
 
-    public Order(int unNumeroCommande)
+    public int getId() {
+        return _orderNumber;
+    }
+
+    public Order(int anOrderNumber)
     {
-        _orderNumber = unNumeroCommande;
+        _orderNumber = anOrderNumber;
         _theDrinks = new ArrayList<>();
     }
 
@@ -41,5 +51,13 @@ public class Order implements Serializable {
 
 
 
+    }
+
+    public Date getOrderDate() {
+        return new Date();
+    }
+
+    public int getTableNumber() {
+        return new Random().nextInt() % 50;
     }
 }

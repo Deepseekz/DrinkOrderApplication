@@ -35,10 +35,6 @@ public class Drink implements Serializable {
     @Override
     public String toString()
     {
-        return "Boisson{" +
-                "_nom='" + _nom + '\'' +
-                ", _volumeCl=" + _volumeCl +
-                ", _prix=" + _prix +
-                '}';
+        return _nom + " " + _volumeCl + " FL OZ " + _prix + "$";
     }
 }
