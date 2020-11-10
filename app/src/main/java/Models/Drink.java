@@ -2,15 +2,11 @@ package Models;
 
 import java.io.Serializable;
 
-public class Boisson implements Serializable {
+public class Drink implements Serializable {
     private String _nom;
     private int _volumeCl;
     private double _prix;
     private int _imageResourceId;
-
-    public int get_id() {
-        return _id;
-    }
 
     public String get_nom() {
         return _nom;
@@ -28,9 +24,8 @@ public class Boisson implements Serializable {
         this._prix = _prix;
     }
 
-    public Boisson(int unId, String unNom, int unVolumeCl, double unPrix, int uneImageResourceId)
+    public Drink(String unNom, int unVolumeCl, double unPrix, int uneImageResourceId)
     {
-        _id = unId;
         _nom = unNom;
         _volumeCl = unVolumeCl;
         _prix = unPrix;
@@ -41,8 +36,7 @@ public class Boisson implements Serializable {
     public String toString()
     {
         return "Boisson{" +
-                "_id=" + _id +
-                ", _nom='" + _nom + '\'' +
+                "_nom='" + _nom + '\'' +
                 ", _volumeCl=" + _volumeCl +
                 ", _prix=" + _prix +
                 '}';
