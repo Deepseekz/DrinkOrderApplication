@@ -24,12 +24,12 @@ public class Drink implements Serializable {
         this._prix = _prix;
     }
 
-    public Drink(String unNom, int unVolumeCl, double unPrix, int uneImageResourceId)
+    public Drink(String aName, int unVolumeCl, double aPrice, int anImageId)
     {
-        _nom = unNom;
+        _nom = aName;
         _volumeCl = unVolumeCl;
-        _prix = unPrix;
-        _imageResourceId= uneImageResourceId;
+        _prix = aPrice;
+        _imageResourceId= anImageId;
     }
 
     @Override
